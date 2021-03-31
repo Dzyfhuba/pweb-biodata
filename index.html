@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,600,700,800,900&display=swap'>
+        <title>Here We Are</title>
+
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="page-1 pageBlur">
+            <div class="row" >      
+                <div class="title">
+                    <h1 style="font-size: 3em;">Who We Are ?</h1>
+                </div>                      
+                <div class="card">
+                    <div class="image">
+                        <img src="pic1.jpg">
+                    </div>
+                    <div class="text">
+                        <h1>Ahmad Fadlur Rohman</h1>
+                        <p>190602017</p>
+                        <a class="btn" onclick="btnClick(1)">Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="pic1.jpg">
+                    </div>
+                    <div class="text">
+
+                        <h1>Muhammad Iqbal Firdaus</h1>
+                        <p>190602028</p>
+                        <a class="btn" onclick="btnClick(2)">Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="pic1.jpg">
+                    </div>
+                    <div class="text">
+
+                        <h1>Hafidz Ubaidillah</h1>
+                        <p>190602043</p>
+                        <a class="btn" onclick="btnClick(3)">Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="pic1.jpg">
+                    </div>
+                    <div class="text">
+                        <h1>Naufal Alief</h1>
+                        <p>190602050</p>
+                        <a class="btn" onclick="btnClick(4)">Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="pic1.jpg">
+                    </div>
+                    <div class="text">
+                        <h1>Wukualam</h1>
+                        <p>190602014</p>
+                        <a class="btn" onclick="btnClick(5)">Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="detailCard1" class="detailCard" style="display: none;">
+            <div class="detailCardflex">
+                <div class="detailCardContent">
+                    <div class="col-50">
+                        <div class="card" style="background-color: #181818;">
+                            <div class="image">
+                                <img src="pic1.jpg">
+                            </div>
+                            <div class="text">
+                                <h1>Fadhlur</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <h1>About Me</h1>
+                        <p>Nama : <a class="isian">Ahmad Fadhlur Rohman</a></p>
+                        <p>NIM : <a class="isian">190602017</a></p>
+                        <p>Alamat : <a class="isian">Lamongan</a></p></p>
+                        <p>Nomer Telepon : <a class="isian">089520811987</a></p></p>
+                        <p>Email : <a class="isian">4hmad.fadhlur@gmail.com</a></p></p>
+                    </div>  
+                    <span class="close" onclick="btnClose('1')">X</span>
+                </div>
+            </div>
+        </div>
+        <div id="detailCard2" class="detailCard" style="display: none;">
+            <div class="detailCardflex">
+                <div class="detailCardContent">
+                    <div class="col-50">
+                        <div class="card" style="background-color: #181818;">
+                            <div class="image">
+                                <img src="pic1.jpg">
+                            </div>
+                            <div class="text">
+                                <h1>Iqbal</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <h1>About Me</h1>
+                        <p>Nama : <a class="isian">Ahmad Rohman</a></p>
+                        <p>NIM : <a class="isian">190602017</a></p>
+                        <p>Alamat :</p>
+                        <p>Nomer Telepon :</p>
+                        <p>Email :</p>
+                    </div>  
+                    <span class="close" onclick="btnClose('2')">X</span>
+                </div>
+            </div>
+        </div>
+        <div id="detailCard3" class="detailCard" style="display: none;">
+            <div class="detailCardflex">
+                <div class="detailCardContent">
+                    <div class="col-50">
+                        <div class="card" style="background-color: #181818;">
+                            <div class="image">
+                                <img src="pic1.jpg">
+                            </div>
+                            <div class="text">
+                                <h1>Hafidz</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <h1>About Me</h1>
+                        <p>Nama : <a class="isian">Ahmad Rohman</a></p>
+                        <p>NIM : <a class="isian">190602017</a></p>
+                        <p>Alamat :</p>
+                        <p>Nomer Telepon :</p>
+                        <p>Email :</p>
+                    </div>  
+                    <span class="close" onclick="btnClose('3')">X</span>
+                </div>
+            </div>
+        </div>
+        <div id="detailCard4" class="detailCard" style="display: none;">
+            <div class="detailCardflex">
+                <div class="detailCardContent">
+                    <div class="col-50">
+                        <div class="card" style="background-color: #181818;">
+                            <div class="image">
+                                <img src="pic1.jpg">
+                            </div>
+                            <div class="text">
+                                <h1>Afal</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <h1>About Me</h1>
+                        <p>Nama : <a class="isian"> Rohman</a></p>
+                        <p>NIM : <a class="isian">190602017</a></p>
+                        <p>Alamat :</p>
+                        <p>Nomer Telepon :</p>
+                        <p>Email :</p>
+                    </div>  
+                    <span class="close" onclick="btnClose('4')">X</span>
+                </div>
+            </div>
+        </div>
+        <div id="detailCard5" class="detailCard" style="display: none;">
+            <div class="detailCardflex">
+                <div class="detailCardContent">
+                    <div class="col-50">
+                        <div class="card" style="background-color: #181818;">
+                            <div class="image">
+                                <img src="pic1.jpg">
+                            </div>
+                            <div class="text">
+                                <h1>Bolang</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <h1>About Me</h1>
+                        <p>Nama : <a class="isian">Ahmad Rohman</a></p>
+                        <p>NIM : <a class="isian">02017</a></p>
+                        <p>Alamat :</p>
+                        <p>Nomer Telepon :</p>
+                        <p>Email :</p>
+                    </div>  
+                    <span class="close" onclick="btnClose('5')">X</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
