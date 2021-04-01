@@ -132,6 +132,8 @@ body {
 }
 
 .detailCardContent .isian {
+  text-decoration: none;
+  color: white;
   padding: 5px 10px;
   background-color: #181818;
   border-radius: 5px;
