@@ -4,12 +4,14 @@
         <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,600,700,800,900&display=swap'>
         <title>Here Are We</title>
 
-        <!-- <script src="idx.js"></script> -->
+        
         <link rel="stylesheet" href="style.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- <script src="jquery-3.6.0.js"></script> -->
+        
         <?php include 'control.php' ?>
+        <script src="index.js"></script>
 
         <style>
            
@@ -17,6 +19,7 @@
         </style>
     </head>
     <body>
+    
         <section class="page-1 pageBlur">
             <div class="row" style="display:none;">      
                 <div class="title">
@@ -121,73 +124,6 @@
 
     </body>
 
-    <script>
-        //Mengetahui jumlah card
-        var items = document.getElementsByClassName("detailCard");
-        console.log("items ="+items.length);
-        var durasi = 0;
-        
-        
-        $(document).ready(function(){
-            //Menganimasi saat halaman dibuka
-            $(".row").fadeIn(3000);
-
-            for(i=0;i<items.length;i++){
-                $("#card"+i).fadeIn(durasi+=1000);
-                console.log("fade "+i);
-            }
-
-            //men Submit biodata Baru
-
-            $("#btnSubmit").click(function(){              
-                    submitData();
-            })
-
-        })
-        
-
-        function submitData(){
-            var dataString = '';
-            $.ajax({
-                type: "POST",
-                url:"http://localhost/pweb-1/index.php",
-                data:dataString,
-                crossDomain:true,
-                cache:false,
-                beforeSend: function(){
-
-                },
-                success:function(data){
-                    alert("success");
-                }
-            })
-        }
-        //Memanggil efect Blur
-        // $(document).ready(function(){
-        //     $(".btn").click(function(){
-        //             $(".page-1").toggleClass("pageBluractive");
-        //     })
-        //     $(".close").click(function(){
-        //             $(".page-1").toggleClass("pageBluractive"); 
-        //     })
-        // })
-
-
-        //Memanggil detailcard sesuai nomer
-        function btnClick(nomer) {
-            $(document).ready(function(){
-                $(".page-1").toggleClass("pageBluractive");
-                $("#detailCard"+nomer).slideToggle(200);
-            })
-        }
-
-        function btnClose(nomer) {
-            $(document).ready(function(){
-                $(".page-1").toggleClass("pageBluractive");
-                $("#detailCard"+nomer).slideToggle(300);
-            })
-        }
-
-    </script>
+    
 
 </html>
