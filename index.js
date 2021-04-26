@@ -1,21 +1,3 @@
-// function btnClick(nomer) {
-//   const pageBlur = document.querySelector(".pageBlur");
-//   pageBlur.classList.toggle("active");
-
-//   // const detailPage = document.querySelector('.detailCard');
-//   // detailPage.classList.toggle('active');
-
-//   var boten = document.getElementById("detailCard" + nomer);
-//   boten.style.display = "block";
-// }
-// function btnClose(nomer) {
-//   var cls = document.getElementById("detailCard" + nomer);
-//   cls.style.display = "none";
-
-//   const pageBlur = document.querySelector(".pageBlur");
-//   pageBlur.classList.toggle("active");
-// }
-
 //Mengetahui jumlah card
 var items = document.getElementsByClassName("detailCard");
 console.log("items ="+items.length);
@@ -67,7 +49,7 @@ function submitData(){
 // })
 
 
-//Memanggil detailcard sesuai nomer
+//Memanggil detailcard sesuai nomer dan effect blur
 function btnClick(nomer) {
     $(document).ready(function(){
         $(".page-1").toggleClass("pageBluractive");
