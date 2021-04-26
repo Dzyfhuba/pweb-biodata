@@ -81,7 +81,6 @@
         </div>
         <?php } ?>
 
-<!-- detailCard tambah Baru -->
         <div id="detailCardTambah" class="detailCard" style="display: none;">
             <div class="detailCardflex">
                 <div class="detailCardContent">
