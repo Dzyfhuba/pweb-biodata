@@ -45,12 +45,14 @@
 
 include 'connect.php';
 
+$photo_dir = "";
+
 if (isset($_FILES['file']['name'])) {
     /* Getting file name */
     $filename = $_FILES['file']['name'];
 
     /* Location */
-    $location = 'data/' . $filename;
+    $location = 'images/' . $filename;
     $imageFileType = pathinfo($location, PATHINFO_EXTENSION);
     $imageFileType = strtolower($imageFileType);
 
@@ -70,6 +72,8 @@ if (isset($_FILES['file']['name'])) {
     // exit;
 }
 
+$photo_dir = $response;
+
 $nama = $_POST['nama'];
 $panggilan = $_POST['panggilan'];
 $nim = $_POST['nim'];
@@ -79,13 +83,22 @@ $email = $_POST['email'];
 $id_prodi = $_POST['id_prodi'];
 $id_kelas = $_POST['id_kelas'];
 
-$sql = "INSERT INTO `mahasiswa`( `nama`,   `panggilan`, `alamat`, `nim`, `no_telp`, `email`, `id_prodi`, `id_kelas`) 
-	VALUES ('$nama', '$panggilan', '$alamat', '$nim', '$no_telp','$email','$id_prodi','$id_kelas')";
-if (mysqli_query($conn, $sql)) {
+$sql1 = "INSERT INTO `mahasiswa`( `nim`, `nama`,   `panggilan`, `alamat`, `no_telp`, `email`, `id_prodi`, `id_kelas`) 
+	VALUES ( '$nim', '$nama', '$panggilan', '$alamat', '$no_telp','$email','$id_prodi','$id_kelas')";
+$sql2 = "INSERT INTO `photo` (`photo_dir`) VALUES ('$photo_dir')";
+if (mysqli_query($conn1, $sql1)) {
     echo json_encode(['statusCode' => 200]);
 } else {
     echo json_encode(['statusCode' => 201]);
 }
-mysqli_close($conn);
+
+if (mysqli_query($conn2, $sql2)) {
+    echo json_encode(['statusCode' => 200]);
+} else {
+    echo json_encode(['statusCode' => 201]);
+}
+
+mysqli_close($conn1);
+mysqli_close($conn2);
 ?>
 
