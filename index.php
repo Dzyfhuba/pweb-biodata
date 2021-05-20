@@ -93,7 +93,8 @@
             </div>
         </div>
     <?php } ?>
-    <div class="alert alert-success alert-dismissible" id="success" style="display:none;">
+    <!-- error disini, bila tidak penting hapus 
+        <div class="alert alert-success alert-dismissible" id="success" style="display:none;"> -->
 
     <!-- detailCard tambah Baru -->
     <div id="detailCardTambah" class="detailCard" style="display: none;">
@@ -107,21 +108,11 @@
                     <div class="">
                         <div class="fileUpload">
                             <label class="btnAdd">+
-                                <input id="file" type="file" class="upload" />
+                                <input type="file" class="upload"/>
                             </label>
                         </div>
                     </div>
 
-
-                    <!-- <div class="input-group mb-3">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile02">
-
-                        </div>
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                        </div>
-                        </div> -->
                     </div>
                     <div class="col-50">
 

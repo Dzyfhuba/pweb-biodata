@@ -173,30 +173,48 @@ body {
   }
 
   .btnAdd{
-      display: flex;
-      padding: 10px;
-      width: 70px;
-      height: 70px;
-      justify-content: center;
-      align-items: center;
-      border:4px dashed #181818;
-      background-color: transparent;
-      border-radius: 50%;
-      
-      font-size: 50px;
-      transition: 0.4s;
-      cursor: pointer;
-      color: #181818;
-  }
-  .btnAdd:hover {
-      background-color: #3e7f81;
-      border-color: #3e7f81;
-      color: white;
-  }
-  .col-50 input{
-      border: none;
-      height: 20px;
-      width: 250px;
-      border-radius: 3px;
-      padding: 0 5px;
-  }
+    display: flex;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    border:4px dashed #181818;
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 50px;
+    transition: 0.4s;
+    cursor: pointer;
+    color: #181818;
+}
+.btnAdd:hover {
+    background-color: #3e7f81;
+    border-color: #3e7f81;
+    color: white;
+}
+.col-50 input{
+    border: none;
+    height: 20px;
+    width: 250px;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+.col-50 select{
+    border: none;
+    height: 20px;
+    width: 260px;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+.fileUpload{
+    min-height: 30vh;
+    width: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px dashed #181818;
+    border-radius: 10px;
+}
+.upload{
+    display: none;
+}
