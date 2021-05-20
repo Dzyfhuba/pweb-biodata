@@ -17,7 +17,6 @@ $(document).ready(function () {
 
   $("#btnSubmit").click(function () {
     submitData();
-
     submitDetailCard();
   })
 
@@ -85,7 +84,6 @@ $(document).ready(function () {
 
       },
       success: function (data) {
-        alert("success");
         $("#newCard").append(data); //menampilkan temporary.php di id newCard
         btnClose("Tambah");
         clearInputan();

@@ -46,6 +46,7 @@
             <!--akhir perulangan-->
             <!-- tempat Card baru Ajax -->
             <div id="newCard">
+            
             </div>
             <!-- card tambah baru -->
             <div class="card" id="card<?php echo $nomer; ?>" style="display:flex;align-items: center; justify-content: center;">
@@ -95,25 +96,24 @@
 
     </div>
 
-    <!-- detailCard tambah Baru -->
-    <div id="detailCardTambah" class="detailCard" style="display: none;">
+   <!-- detailCard tambah Baru -->
+   <div id="detailCardTambah" class="detailCard" style="display: none;">
         <div class="detailCardflex">
             <div class="detailCardContent">
-                <form id="biodataForm" method="post">
-                    <span class="close" onclick="btnClose('Tambah')">&times;</span>
-                    <div class="col-50">
-                        <h1>Insert<br> Biodata</h1>
-                        <!-- button tambah image -->
+                <span class="close" onclick="btnClose('Tambah')">&times;</span>
+                <div class="col-50">
+                    <h1>Insert<br> Biodata</h1>
+                    <!-- button tambah image -->
                     <div class="">
                         <div class="fileUpload">
-                            <label class="btnAdd">+
-                                <input type="file" class="upload"/>
+                            <label class="btnAdd">
+                                <p style="font-size: 20px;">Foto</p>
+                                <input type="file" class="upload" />
                             </label>
                         </div>
                     </div>
-
-                    </div>
-                    <div class="col-50">
+                </div>
+                <div class="col-50">
 
                         <label>Nama : </label><br>
                         <input type="text" id="nama"></input>
@@ -153,7 +153,6 @@
 
                         <button class="btn" id="btnSubmit">Submit</button>
                     </div>               
-                </form>
             </div>
         </div>
     </div>

@@ -1,34 +1,37 @@
 <?php
 
-include "connect.php";
+// include "connect.php";
 
-$sql = "SELECT nim, nama, panggilan, alamat, no_telp, id_prodi, id_kelas FROM mahasiswa";
-$result = $conn1->query($sql);
-$sql = "SELECT photo_dir FROM photo";
-$result2 = $conn2->query($sql);
+// $sql = "SELECT nim, nama, panggilan, alamat, no_telp, id_prodi, id_kelas FROM mahasiswa";
+// $result = $conn1->query($sql);
+// $sql = "SELECT photo_dir FROM photo";
+// $result2 = $conn2->query($sql);
 
-if ($result->num_rows > 0) {
-  while($data = $result->fetch_assoc()) {
-    $nim[] = $data['nim'];
-    $nama[] = $data['nama'];
-    $panggilan[] = $data['panggilan'];
-    $alamat[] = $data['alamat'];
-    $no_telp[] = $data['no_telp'];
-    $id_prodi[] = $data['id_prodi'];
-    $id_kelas[] = $data['id_kelas'];
-  }
-} else {
-  echo "0 results";
-}
+// if ($result->num_rows > 0) {
+//   while($data = $result->fetch_assoc()) {
+//     $nim[] = $data['nim'];
+//     $nama[] = $data['nama'];
+//     $panggilan[] = $data['panggilan'];
+//     $alamat[] = $data['alamat'];
+//     $no_telp[] = $data['no_telp'];
+//     $id_prodi[] = $data['id_prodi'];
+//     $id_kelas[] = $data['id_kelas'];
+//   }
+// } else {
+//   echo "0 results";
+// }
 
-if ($result2->num_rows > 0){
-    while($data = $result2->fetch_assoc()){
-        $photo_dir[] = $data['photo_dir'];
-    }
-} else {
-    echo "0 result";
-}
-$conn1->close();
+// if ($result2->num_rows > 0){
+//     while($data = $result2->fetch_assoc()){
+//         $photo_dir[] = $data['photo_dir'];
+//     }
+// } else {
+//     echo "0 result";
+// }
+// $conn1->close();
+
+
+$nama = []; //agar tidak error php karena perlu mengambil jumlah dari nama
 
 // $image = ['Fadlur.jpg', 'Iqbal.jpeg', 'Hafidz.jpg', 'Afal.jpg', 'Wukualam.jpg'];
 // $nama = [
@@ -68,3 +71,5 @@ $conn1->close();
 //     'Beristirahatlah Sejenak Jika Kamu Lelah Dalam Berproses',
 //     'Bubuk Ae Enak',
 // ];
+
+?>

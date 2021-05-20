@@ -2,7 +2,7 @@
 header('Origin:jAjax.com');
 header('Access-Control-Allow-Origin:*');
 
-include 'control.php';
+// include 'control.php';
 
 $nama2 = $_POST['nama2'];
 $paggilan2 = $_POST['panggilan2'];
