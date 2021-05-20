@@ -3,14 +3,12 @@ var items = document.getElementsByClassName("detailCard");
 console.log("items =" + items.length);
 var durasi = 0;
 
-
-
 $(document).ready(function () {
   //Menganimasi saat halaman dibuka
   $(".row").fadeIn(3000);
 
   for (i = 0; i < items.length; i++) {
-    $("#card" + i).fadeIn(durasi += 1000);
+    $("#card" + i).fadeIn((durasi += 1000));
     console.log("fade " + i);
   }
   --i;
@@ -19,6 +17,7 @@ $(document).ready(function () {
 
   $("#btnSubmit").click(function () {
     submitData();
+
     submitDetailCard();
   })
 
@@ -112,17 +111,16 @@ $(document).ready(function () {
 //             $(".page-1").toggleClass("pageBluractive");
 //     })
 //     $(".close").click(function(){
-//             $(".page-1").toggleClass("pageBluractive"); 
+//             $(".page-1").toggleClass("pageBluractive");
 //     })
 // })
-
 
 //Memanggil detailcard sesuai nomer dan effect blur
 function btnClick(nomer) {
   $(document).ready(function () {
     $(".page-1").toggleClass("pageBluractive");
     $("#detailCard" + nomer).slideToggle(200);
-  })
+  });
 }
 
 function btnClose(nomer) {
@@ -132,5 +130,3 @@ function btnClose(nomer) {
     //clearInputan();
   })
 }
-
-
