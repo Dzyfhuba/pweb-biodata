@@ -44,14 +44,15 @@
                 </div>
             <?php } ?>
             <!--akhir perulangan-->
+            <!-- tempat Card baru Ajax -->
+            <div id="newCard">
 
-            <!-- <?php $nomer = $i + 1;
-                    echo "<p>nomer ke $nomer</p> " ?> -->
+            </div>
 
             <!-- card tambah baru -->
             <div class="card" id="card<?php echo $nomer; ?>" style="display:flex;align-items: center; justify-content: center;">
                 <div class="btnAdd" onclick="btnClick('Tambah')">
-                    <a class="" style="">+</a>
+                    <a>+</a>
                 </div>
             </div>
 
@@ -89,6 +90,10 @@
             </div>
         </div>
     <?php } ?>
+    <!-- tempat DetalCard Baru AJAX -->
+    <div id="newDetailCard">
+
+    </div>
 
     <!-- detailCard tambah Baru -->
     <div id="detailCardTambah" class="detailCard" style="display: none;">
@@ -100,22 +105,12 @@
                     <!-- button tambah image -->
                     <div class="">
                         <div class="fileUpload">
-                            <label class="btnAdd">+
+                            <label class="btnAdd">
+                                <p style="font-size: 20px;">Foto</p>
                                 <input type="file" class="upload" />
                             </label>
                         </div>
                     </div>
-
-
-                    <!-- <div class="input-group mb-3">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile02">
-
-                        </div>
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                        </div>
-                        </div> -->
                 </div>
                 <div class="col-50">
 
@@ -152,6 +147,8 @@
 
 </body>
 
+<script>
 
+</script>
 
 </html>
