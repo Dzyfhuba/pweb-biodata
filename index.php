@@ -44,16 +44,13 @@
                 </div>
             <?php } ?>
             <!--akhir perulangan-->
-
-            <!-- <?php
-            $nomer = $i + 1;
-            echo "<p>nomer ke $nomer</p> ";
-            ?> -->
-
+            <!-- tempat Card baru Ajax -->
+            <div id="newCard">
+            </div>
             <!-- card tambah baru -->
             <div class="card" id="card<?php echo $nomer; ?>" style="display:flex;align-items: center; justify-content: center;">
                 <div class="btnAdd" onclick="btnClick('Tambah')">
-                    <a class="" style="">+</a>
+                    <a>+</a>
                 </div>
             </div>
 
@@ -93,8 +90,10 @@
             </div>
         </div>
     <?php } ?>
-    <!-- error disini, bila tidak penting hapus 
-        <div class="alert alert-success alert-dismissible" id="success" style="display:none;"> -->
+    <!-- tempat DetalCard Baru AJAX -->
+    <div id="newDetailCard">
+
+    </div>
 
     <!-- detailCard tambah Baru -->
     <div id="detailCardTambah" class="detailCard" style="display: none;">
@@ -162,6 +161,8 @@
 
 </body>
 
+<script>
 
+</script>
 
 </html>
