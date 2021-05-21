@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="jquery-3.6.0.js"></script> -->
 
-    <?php include 'view.php'; ?>
+    <!-- <?php include 'view.php'; ?> -->
     <script src="index.js"></script>
 
     <style>
@@ -30,7 +30,7 @@
                 <h1 style="font-size: 3em;">Who Are We ?</h1>
             </div>
             <!--perulangan PHP card-->
-            <?php for ($i = 0; $i < count($nama); $i++) { ?>
+            <!-- <?php for ($i = 0; $i < count($nama); $i++) { ?>
                 <div class="card" id="card<?php echo $i; ?>">
                     <div class="image">
                         <img src="images/<?php echo $image[$i]; ?>">
@@ -42,7 +42,7 @@
                         <a class="btn" onclick="btnClick(<?php echo $i; ?>)" style="">Details</a>
                     </div>
                 </div>
-            <?php } ?>
+            <?php } ?> -->
             <!--akhir perulangan-->
             <!-- tempat Card baru Ajax -->
             <div id="newCard">

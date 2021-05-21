@@ -2,17 +2,28 @@
 header('Origin:jAjax.com');
 header('Access-Control-Allow-Origin:*');
 
-// include 'control.php';
+include 'connect.php';
 
 $nama2 = $_POST['nama2'];
-$paggilan2 = $_POST['panggilan2'];
+$panggilan2 = $_POST['panggilan2'];
 $nim2 = $_POST['nim2'];
 $alamat2 = $_POST['alamat2'];
 $no_telp2 = $_POST['no_telp2'];
 $email2 = $_POST['email2'];
 $num2 = $_POST['num2'];
+$id_prodi2 = $_POST['id_prodi'];
+$id_kelas2 = $_POST['id_kelas'];
 
 $img2 = "images/avatar1.png";
+
+$sql1 = "INSERT INTO `mahasiswa`( `nim`, `nama`,   `panggilan`, `alamat`, `no_telp`, `email`, `id_prodi`, `id_kelas`) 
+	VALUES ( '$nim2', '$nama2', '$panggilan2', '$alamat2', '$no_telp2','$email2', $id_prodi2, $id_kelas2)";
+
+if (mysqli_query($conn1, $sql1)) {
+    echo json_encode(['statusCode' => 200]);
+} else {
+    echo json_encode(['statusCode' => 201]);
+}
 
 $content2 = '
     <div id="detailCard' . $num2 . '" class="detailCard" style="display: none;">
@@ -25,7 +36,7 @@ $content2 = '
                                 <img src="' . $img2 . '">
                             </div>
                             <div class="text">
-                                <h1>' . $paggilan2 . '</h1>
+                                <h1>' . $panggilan2 . '</h1>
                             </div>
                         </div>
                     </div>
@@ -38,6 +49,10 @@ $content2 = '
                         <p>Nomor Telepon : <a class="isian">' . $no_telp2 . '</a></p>
                         </p>
                         <p>Email : <a class="isian">' . $email2 . '</a></p>
+                        </p>
+                        <p>Prodi : <a class="isian">' . $id_prodi2 . '</a></p>
+                        </p>
+                        <p>Kelas : <a class="isian">' . $id_kelas2 . '</a></p>
                         </p>
                     </div>
                 </div>
