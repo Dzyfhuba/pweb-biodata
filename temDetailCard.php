@@ -11,8 +11,8 @@ $alamat2 = $_POST['alamat2'];
 $no_telp2 = $_POST['no_telp2'];
 $email2 = $_POST['email2'];
 $num2 = $_POST['num2'];
-$id_prodi2 = $_POST['id_prodi'];
-$id_kelas2 = $_POST['id_kelas'];
+$id_prodi2 = $_POST['id_prodi2'];
+$id_kelas2 = $_POST['id_kelas2'];
 
 $img2 = "images/avatar1.png";
 

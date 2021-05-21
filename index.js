@@ -26,11 +26,20 @@ $(document).ready(function () {
       type: "POST",
       success: function (data) {
         $("#newCard").append(data);
-        $("#newDetailCard").append(data);
       },
     });
   }
   loadTableData();
+  function loadTableData2() {
+    $.ajax({
+      url: "loaddata2.php",
+      type: "POST",
+      success: function (data) {
+        $("#newDetailCard").append(data);
+      },
+    });
+  }
+  loadTableData2();
 
   //untuk detailcard >> temDetailCard.php
   function submitDetailCard() {

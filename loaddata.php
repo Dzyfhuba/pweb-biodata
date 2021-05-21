@@ -58,69 +58,6 @@ for ($i = 0; $i < $length; $i++) {
 
 echo $content1;
 
-$content2 = "";
-for ($i = 0; $i < $length; $i++) {
-    $content2 .=
-        '
-  <div id="detailCard' .
-        $i .
-        '" class="detailCard" style="display: none;">
-  <div class="detailCardflex">
-      <div class="detailCardContent">
-          <span class="close" onclick="btnClose(' .
-        $i .
-        ')">&times;</span>
-          <div class="col-50">
-              <div class="card" style="background-color: #181818; display: block;">
-                  <div class="image">
-                      <img src="' .
-        $img .
-        '">
-                  </div>
-                  <div class="text">
-                      <h1>' .
-        $panggilan[$i] .
-        '</h1>
-                  </div>
-              </div>
-          </div>
-          <div class="col-50">
-              <h1>About Me</h1>
-              <p>Nama : <a class="isian">' .
-        $nama[$i] .
-        '</a></p>
-              <p>NIM : <a class="isian">' .
-        $nim[$i] .
-        '</a></p>
-              <p>Alamat : <a class="isian">' .
-        $alamat[$i] .
-        '</a></p>
-              </p>
-              <p>Nomor Telepon : <a class="isian">' .
-        $no_telp[$i] .
-        '</a></p>
-              </p>
-              <p>Email : <a class="isian">' .
-        $email[$i] .
-        '</a></p>
-              </p>
-              <p>Prodi : <a class="isian">' .
-        $id_prodi[$i] .
-        '</a></p>
-              </p>
-              <p>Kelas : <a class="isian">' .
-        $id_kelas[$i] .
-        '</a></p>
-              </p>
-          </div>
-      </div>
-  </div>
-</div>
-      ';
-}
-
-echo $content2;
-
 // $nama = []; //agar tidak error php karena perlu mengambil jumlah dari nama
 
 // $image = ['Fadlur.jpg', 'Iqbal.jpeg', 'Hafidz.jpg', 'Afal.jpg', 'Wukualam.jpg'];

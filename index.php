@@ -59,7 +59,7 @@
     </section>
 
     <!--perulangan PHP detailcard-->
-    <?php for ($i = 0; $i < count($nama); $i++) { ?>
+    <!-- <?php for ($i = 0; $i < count($nama); $i++) { ?>
         <div id="detailCard<?php echo $i; ?>" class="detailCard" style="display: none;">
             <div class="detailCardflex">
                 <div class="detailCardContent">
@@ -90,7 +90,7 @@
                 </div>
             </div>
         </div>
-    <?php } ?>
+    <?php } ?> -->
     <!-- tempat DetalCard Baru AJAX -->
     <div id="newDetailCard">
 
