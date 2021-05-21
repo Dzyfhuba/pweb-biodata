@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="jquery-3.6.0.js"></script> -->
 
-    <?php include 'view.php'; ?>
+    <!-- <?php include 'view.php'; ?> -->
     <script src="index.js"></script>
 
     <style>
@@ -30,7 +30,7 @@
                 <h1 style="font-size: 3em;">Who Are We ?</h1>
             </div>
             <!--perulangan PHP card-->
-            <?php for ($i = 0; $i < count($nama); $i++) { ?>
+            <!-- <?php for ($i = 0; $i < count($nama); $i++) { ?>
                 <div class="card" id="card<?php echo $i; ?>">
                     <div class="image">
                         <img src="images/<?php echo $image[$i]; ?>">
@@ -42,18 +42,16 @@
                         <a class="btn" onclick="btnClick(<?php echo $i; ?>)" style="">Details</a>
                     </div>
                 </div>
-            <?php } ?>
+            <?php } ?> -->
             <!--akhir perulangan-->
-
-            <!-- <?php
-            $nomer = $i + 1;
-            echo "<p>nomer ke $nomer</p> ";
-            ?> -->
-
+            <!-- tempat Card baru Ajax -->
+            <div id="newCard">
+            
+            </div>
             <!-- card tambah baru -->
             <div class="card" id="card<?php echo $nomer; ?>" style="display:flex;align-items: center; justify-content: center;">
                 <div class="btnAdd" onclick="btnClick('Tambah')">
-                    <a class="" style="">+</a>
+                    <a>+</a>
                 </div>
             </div>
 
@@ -93,28 +91,29 @@
             </div>
         </div>
     <?php } ?>
-    <!-- error disini, bila tidak penting hapus 
-        <div class="alert alert-success alert-dismissible" id="success" style="display:none;"> -->
+    <!-- tempat DetalCard Baru AJAX -->
+    <div id="newDetailCard">
 
-    <!-- detailCard tambah Baru -->
-    <div id="detailCardTambah" class="detailCard" style="display: none;">
+    </div>
+
+   <!-- detailCard tambah Baru -->
+   <div id="detailCardTambah" class="detailCard" style="display: none;">
         <div class="detailCardflex">
             <div class="detailCardContent">
-                <form id="biodataForm" method="post">
-                    <span class="close" onclick="btnClose('Tambah')">&times;</span>
-                    <div class="col-50">
-                        <h1>Insert<br> Biodata</h1>
-                        <!-- button tambah image -->
+                <span class="close" onclick="btnClose('Tambah')">&times;</span>
+                <div class="col-50">
+                    <h1>Insert<br> Biodata</h1>
+                    <!-- button tambah image -->
                     <div class="">
                         <div class="fileUpload">
-                            <label class="btnAdd">+
-                                <input type="file" class="upload"/>
+                            <label class="btnAdd">
+                                <p style="font-size: 20px;">Foto</p>
+                                <input type="file" class="upload" />
                             </label>
                         </div>
                     </div>
-
-                    </div>
-                    <div class="col-50">
+                </div>
+                <div class="col-50">
 
                         <label>Nama : </label><br>
                         <input type="text" id="nama"></input>
@@ -154,7 +153,6 @@
 
                         <button class="btn" id="btnSubmit">Submit</button>
                     </div>               
-                </form>
             </div>
         </div>
     </div>
@@ -162,6 +160,8 @@
 
 </body>
 
+<script>
 
+</script>
 
 </html>
